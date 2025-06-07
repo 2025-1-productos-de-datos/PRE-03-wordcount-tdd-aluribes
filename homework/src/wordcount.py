@@ -1,6 +1,4 @@
 # obtain a list of files in the input directory
-# Ctrl Shift L
-# Ctrl Alt Flecha arriba/abajo
 
 import sys
 
