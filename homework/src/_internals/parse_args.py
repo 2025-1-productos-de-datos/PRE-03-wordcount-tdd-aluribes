@@ -1,13 +1,21 @@
 import argparse
 
+
 def parse_args():
-    parser = argparse.ArgumentParser(description="Count words in files")
-    parser.add_argument("input", help="path of input folder")
-    parser.add_argument("output", help="path of output folder")
 
-    args = parser.parse_args()
+    parser = argparse.ArgumentParser(description="Count words in files.")
 
-    input_folder = args.input
-    output_folder = args.output
+    parser.add_argument(
+        "input",
+        type=str,
+        help="Path to the input folder containing files to process",
+    )
+    parser.add_argument(
+        "output",
+        type=str,
+        help="Path to the output folder for results",
+    )
 
-    return input_folder, output_folder
+    parsed_args = parser.parse_args()
+
+    return parsed_args.input, parsed_args.output
